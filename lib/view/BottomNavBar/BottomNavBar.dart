@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hirist_tech/view/BottomNavBar/HomeScreen.dart';
+import 'package:hirist_tech/view/BottomNavBar/Notifications.dart';
+import 'package:hirist_tech/view/BottomNavBar/explore.dart';
 
 // import 'package:instagram_clone_application/view/select_account_screen/select_account_screen.dart';
 
@@ -13,12 +15,8 @@ class BottomNavBarScreen extends StatefulWidget {
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   List<Widget> screesList = [
     HomeScreen(),
-    Container(
-      color: Colors.yellow,
-    ),
-    Container(
-      color: Colors.blue,
-    ),
+    Explore(),
+    Notifications(),
     Container(
       color: Colors.pink,
     )

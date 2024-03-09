@@ -144,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Stack(children: [
                 Container(
-                  height: 400,
+                  height: 445,
                   width: 400,
                   child: TabBarView(
                       children: [JobsTab(), CompaniesTab(), CoursesTab()]),
@@ -165,22 +165,27 @@ class _HomeScreenState extends State<HomeScreen> {
                         );
                       },
                       child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30)),
-                        height: 40,
-                        width: 110,
                         child: Center(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(Icons.tune_rounded),
-                              SizedBox(
-                                width: 5,
+                          child: Container(
+                            padding: EdgeInsets.all(2),
+                            decoration: BoxDecoration(
+                                // color: Colors.white,
+                                borderRadius: BorderRadius.circular(30)),
+                            height: 40,
+                            width: 100,
+                            child: Center(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                // mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(Icons.tune_rounded),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text("Filter"),
+                                ],
                               ),
-                              Text("Filter")
-                            ],
+                            ),
                           ),
                         ),
                       ),
