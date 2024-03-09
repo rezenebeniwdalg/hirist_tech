@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hirist_tech/globalwidget/stories.dart';
 import 'package:hirist_tech/globalwidget/storynotify.dart';
 import 'package:hirist_tech/hirist_db.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/companiestab.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/coursestab.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/jobstab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,6 +19,21 @@ class _HomeScreenState extends State<HomeScreen> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        // floatingActionButton: SizedBox(
+        //   height: 40,
+        //   width: 70,
+        //   child: FittedBox(
+        //     child: FloatingActionButton(
+        //         child: Row(
+        //           children: [
+        //             Icon(Icons.tune_outlined),
+        //             Text("Filter   "),
+        //           ],
+        //         ),
+        //         onPressed: () {}),
+        //   ),
+        // ),
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 242, 242, 252),
           leading: Image.asset(
@@ -37,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               Container(
+                color: Colors.white,
                 child: Row(
                   children: [
                     Text(
@@ -92,50 +111,83 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              BottomAppBar(
-                child: TabBar(
-                    dividerHeight: 0,
-                    labelColor: Color.fromARGB(255, 245, 88, 45),
-                    unselectedLabelColor: Colors.grey,
-                    indicatorColor: Color.fromARGB(255, 245, 88, 45),
-                    indicatorWeight: 3,
-                    indicatorSize: TabBarIndicatorSize.tab,
-                    tabs: [
-                      Tab(
-                        child: Text(
-                          "JOBS",
-                          style: TextStyle(fontSize: 15),
+              Material(
+                child: BottomAppBar(
+                  child: TabBar(
+                      dividerHeight: 0,
+                      labelColor: Color.fromARGB(255, 245, 88, 45),
+                      unselectedLabelColor: Colors.grey,
+                      indicatorColor: Color.fromARGB(255, 245, 88, 45),
+                      indicatorWeight: 3,
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      tabs: [
+                        Tab(
+                          child: Text(
+                            "JOBS",
+                            style: TextStyle(fontSize: 15),
+                          ),
                         ),
-                      ),
-                      Tab(
-                        child: Text(
-                          "COMPANIES",
-                          style: TextStyle(fontSize: 15),
+                        Tab(
+                          child: Text(
+                            "COMPANIES",
+                            style: TextStyle(fontSize: 15),
+                          ),
                         ),
-                      ),
-                      Tab(
-                        child: Text(
-                          "COURSES",
-                          style: TextStyle(fontSize: 15),
+                        Tab(
+                          child: Text(
+                            "COURSES",
+                            style: TextStyle(fontSize: 15),
+                          ),
                         ),
-                      ),
-                    ]),
+                      ]),
+                ),
               ),
-              Container(
-                height: 200,
-                width: 200,
-                child: TabBarView(children: [
-                  Container(
-                    color: Colors.yellow,
+              Stack(children: [
+                Container(
+                  height: 400,
+                  width: 400,
+                  child: TabBarView(
+                      children: [JobsTab(), CompaniesTab(), CoursesTab()]),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 120,
+                  child: Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          context: context,
+                          builder: (context) => Container(
+                            width: double.infinity,
+                            child: StoryNotify(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(30)),
+                        height: 40,
+                        width: 110,
+                        child: Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            // mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.tune_rounded),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text("Filter")
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                  Container(
-                    color: Colors.red,
-                  ),
-                  Container(
-                    color: Colors.blue,
-                  ),
-                ]),
-              )
+                )
+              ])
             ],
           ),
         ),

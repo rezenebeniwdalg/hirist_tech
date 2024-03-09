@@ -14,37 +14,44 @@ class Hirist_db {
     },
     {
       "organization": "KreditBee",
-      "profile": "",
+      "profile":
+          "https://asset.brandfetch.io/id-TO0wEQ2/idGsSmEww5.jpeg?updated=1668516430831",
       "status": false,
     },
     {
       "organization": "DoSelect",
-      "profile": "",
+      "profile":
+          "https://asset.brandfetch.io/search/icon/idsi-EXEyF/idtNazbGjs/1708150227578",
       "status": false,
     },
     {
       "organization": "AdPushup",
-      "profile": "",
+      "profile":
+          "https://asset.brandfetch.io/idfP5FhlRu/idudJHpEFd.jpeg?updated=1709640357085",
       "status": false,
     },
     {
       "organization": "TaTa Tech",
-      "profile": "",
+      "profile":
+          "https://asset.brandfetch.io/idFVCZT_lu/idjrXbjAsh.jpeg?updated=1708693832764",
       "status": false,
     },
     {
       "organization": "EPAM",
-      "profile": "",
+      "profile":
+          "https://asset.brandfetch.io/idJKRtwCx8/idq7flL_Zq.jpeg?updated=1667682007317",
       "status": false,
     },
     {
       "organization": "Oracle",
-      "profile": "",
+      "profile":
+          "https://asset.brandfetch.io/idnq7H7qT0/idiH8ZIqAO.png?updated=1667576597154",
       "status": false,
     },
     {
       "organization": "Ninjacart",
-      "profile": "",
+      "profile":
+          "https://asset.brandfetch.io/idWBpeQ6XG/idBaNoqYdK.jpeg?updated=1707559107981",
       "status": false,
     },
   ];
