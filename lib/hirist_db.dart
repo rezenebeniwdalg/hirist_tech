@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Hirist_db {
   static const List<Map<String, dynamic>> Storieslist = [
     {
@@ -53,6 +55,77 @@ class Hirist_db {
       "profile":
           "https://asset.brandfetch.io/idWBpeQ6XG/idBaNoqYdK.jpeg?updated=1707559107981",
       "status": false,
+    },
+  ];
+  static const List<Map<String, dynamic>> CompaniesTab = [
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "ola",
+      "Locations": "multiple Locations",
+      "description": "founded in 2011",
+      "perks": [
+        Icons.shield,
+        Icons.shield,
+        Icons.shield,
+        Icons.shield,
+      ]
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "",
+      "Locations": "",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "",
+      "Locations": "",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "",
+      "Locations": "",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "",
+      "Locations": "",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "",
+      "Locations": "",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "",
+      "Locations": "",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CompanyName": "",
+      "Locations": "",
+      "description": "",
+      "perks": "",
     },
   ];
 }

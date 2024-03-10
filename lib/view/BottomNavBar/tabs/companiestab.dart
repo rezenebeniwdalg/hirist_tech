@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hirist_tech/globalwidget/stories.dart';
+import 'package:hirist_tech/hirist_db.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/CompaniesTabcard.dart';
 import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/custom_card_companies.dart';
 
 class CompaniesTab extends StatelessWidget {
@@ -17,56 +20,66 @@ class CompaniesTab extends StatelessWidget {
               //         bottom: BorderSide(color: Colors.black.withOpacity(.1)))),
               padding: EdgeInsets.symmetric(horizontal: 16, vertical: 13),
               child: Text("Companies")),
-          Column(
-            children: [
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Column(
+              children: List.generate(
+                Hirist_db.CompaniesTab.length,
+                (index) => CompaniesTabCard(
+                  ProfilePic: Hirist_db.CompaniesTab[index]["ProfilePic"],
+                  CompanyName: Hirist_db.CompaniesTab[index]["CompanyName"],
+                  Locations: Hirist_db.CompaniesTab[index]["Locations"],
+                  Description: Hirist_db.CompaniesTab[index]["description"],
+                  // perks: Hirist_db.CompaniesTab[index]["perks"],
+                ),
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-            ],
-            // children: List.generate(
-            //   10,
-            //   (index) => CustomCardBuilderWithTile(
-            //     itemCount: index + 1,
-            //   ),
-            // ),
-          )
+            ),
+          ),
+          // Column(
+          //   children: [
+          //     Container(
+          //       height: 150,
+          //       width: 400,
+          //       color: Colors.blue,
+          //     ),
+          //     SizedBox(
+          //       height: 20,
+          //     ),
+          //     Container(
+          //       height: 150,
+          //       width: 400,
+          //       color: Colors.blue,
+          //     ),
+          //     SizedBox(
+          //       height: 20,
+          //     ),
+          //     Container(
+          //       height: 150,
+          //       width: 400,
+          //       color: Colors.blue,
+          //     ),
+          //     SizedBox(
+          //       height: 20,
+          //     ),
+          //     Container(
+          //       height: 150,
+          //       width: 400,
+          //       color: Colors.blue,
+          //     ),
+          //     SizedBox(
+          //       height: 20,
+          //     ),
+          //     Container(
+          //       height: 150,
+          //       width: 400,
+          //       color: Colors.blue,
+          //     ),
+          //     SizedBox(
+          //       height: 20,
+          //     ),
+          //   ],
+          //
+          // )
         ],
       ),
     );

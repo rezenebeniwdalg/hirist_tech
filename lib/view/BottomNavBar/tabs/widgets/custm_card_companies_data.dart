@@ -12,8 +12,8 @@ class _CustonNotificationCardState extends State<CustonNotificationCard> {
   @override
   Widget build(BuildContext context) {
     List profileImages = ["", ""];
-    bool isFollow = true;
-    bool isAlreayFollowing = true;
+    // bool isFollow = true;
+    // bool isAlreayFollowing = true;
     return Container(
       padding: EdgeInsets.only(bottom: 8),
       child: Row(
