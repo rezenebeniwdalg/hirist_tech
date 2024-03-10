@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hirist_tech/globalwidget/LogCustbutton.dart';
+import 'package:hirist_tech/globalwidget/LoginCustbutton.dart';
 import 'package:hirist_tech/globalwidget/custbutton.dart';
 import 'package:hirist_tech/view/BottomNavBar/BottomNavBar.dart';
 
@@ -106,7 +108,6 @@ class _LoginScrState extends State<LoginScr> {
                       setState(() {});
                     },
                   ),
-
                   TextFormField(
                     controller: passController,
                     onTapOutside: (event) {
@@ -142,10 +143,6 @@ class _LoginScrState extends State<LoginScr> {
                     },
                   ),
                   SizedBox(height: 8),
-                  // CustomButton(
-                  //       ButtonColor
-                  // )
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -177,42 +174,6 @@ class _LoginScrState extends State<LoginScr> {
                     },
                   ),
                   SizedBox(height: 30),
-                  // TextButton(
-                  //     onPressed: () {},
-                  //     child: Row(
-                  //       mainAxisAlignment: MainAxisAlignment.center,
-                  //       children: [
-                  //         Icon(Icons.facebook),
-                  //         Text(
-                  //           "Login with Facebook",
-                  //           style: TextStyle(
-                  //             fontSize: 20,
-                  //             fontWeight: FontWeight.w400,
-                  //             color: Color(0xff3797EF),
-                  //           ),
-                  //           textAlign: TextAlign.right,
-                  //         ),
-                  //       ],
-                  //     )),
-                  // SizedBox(
-                  //   height: 15,
-                  // ),
-                  // Row(
-                  //   children: <Widget>[
-                  //     Expanded(
-                  //         child: Divider(
-                  //       endIndent: 30,
-                  //     )),
-                  //     Text("OR"),
-                  //     Expanded(
-                  //         child: Divider(
-                  //       indent: 30,
-                  //     )),
-                  //   ],
-                  // ),
-                  SizedBox(
-                    height: 15,
-                  ),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 15),
                     // decoration: BoxDecoration(
@@ -237,24 +198,6 @@ class _LoginScrState extends State<LoginScr> {
             ),
           )),
         ),
-        // bottomNavigationBar: SingleChildScrollView(
-        //   child: Container(
-        //     padding: EdgeInsets.symmetric(vertical: 15),
-        //     decoration:
-        //         BoxDecoration(border: Border(top: BorderSide(width: .1))),
-        //     child: RichText(
-        //       textAlign: TextAlign.center,
-        //       text: TextSpan(
-        //         text: "Instagram or Facebook",
-        //         style: TextStyle(
-        //             fontSize: 16, color: Colors.black.withOpacity(.6)),
-        //         // children: [
-        //         //   TextSpan(text: "SignUp", style: TextStyle(color: Colors.blue))
-        //         // ],
-        //       ),
-        //     ),
-        //   ),
-        // ),
       ),
     );
   }

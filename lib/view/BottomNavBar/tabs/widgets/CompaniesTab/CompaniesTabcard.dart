@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hirist_tech/hirist_db.dart';
-import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/CompanyPerks.dart';
 
 class CompaniesTabCard extends StatelessWidget {
   const CompaniesTabCard({
@@ -24,7 +23,13 @@ class CompaniesTabCard extends StatelessWidget {
       child: Container(
         child: Row(
           children: [
-            Image.network(ProfilePic),
+            Container(
+              child: Container(
+                width: 50,
+                child: Image.network(ProfilePic),
+              ),
+              // Image.network(ProfilePic),
+            ),
             SizedBox(
               width: 20,
             ),
@@ -42,7 +47,41 @@ class CompaniesTabCard extends StatelessWidget {
 
                 Text(Locations),
                 Text(Description),
+
+                // Divider(
+                //   indent: 100,
+                //   color: Colors.red,
+                // ),
                 Text("Perks & Benefits"),
+                Row(
+                  children: [
+                    CircleAvatar(
+                      // child: Icon(Icons.shield),
+                      radius: 15,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CircleAvatar(
+                      radius: 15,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CircleAvatar(
+                      radius: 15,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CircleAvatar(
+                      radius: 15,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                  ],
+                ),
                 // SingleChildScrollView(
                 //   scrollDirection: Axis.horizontal,
                 //   child: Column(
@@ -55,7 +94,7 @@ class CompaniesTabCard extends StatelessWidget {
                 //   ),
                 // ),
               ],
-            )
+            ),
           ],
         ),
       ),

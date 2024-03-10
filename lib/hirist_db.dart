@@ -60,8 +60,8 @@ class Hirist_db {
   static const List<Map<String, dynamic>> CompaniesTab = [
     {
       "ProfilePic":
-          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
-      "CompanyName": "ola",
+          "https://asset.brandfetch.io/idYZ3W2Jw-/id74hpGvmt.jpeg?updated=1700511046317",
+      "CompanyName": "OLA cabs",
       "Locations": "multiple Locations",
       "description": "founded in 2011",
       "perks": [
@@ -73,9 +73,33 @@ class Hirist_db {
     },
     {
       "ProfilePic":
+          "https://asset.brandfetch.io/idEwC5Ta5q/id26ulo_pA.jpeg?updated=1668516387731",
+      "CompanyName": "InfoEdge",
+      "Locations": "multiple Locations",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://asset.brandfetch.io/idelRQuBkX/idE9fvNUUH.jpeg?updated=1669636245098",
+      "CompanyName": "Virtusa",
+      "Locations": "multiple Locations",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
+          "https://asset.brandfetch.io/idW0eJR7tQ/idELHZx4Ou.png?updated=1702875622134",
+      "CompanyName": "ZS",
+      "Locations": "multiple Locations",
+      "description": "",
+      "perks": "",
+    },
+    {
+      "ProfilePic":
           "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
       "CompanyName": "",
-      "Locations": "",
+      "Locations": "multiple Locations",
       "description": "",
       "perks": "",
     },
@@ -103,29 +127,109 @@ class Hirist_db {
       "description": "",
       "perks": "",
     },
+  ];
+  static const List<Map<String, dynamic>> MoreJobs = [
+    {
+      "position": "Software Program Lead",
+      "position2": "- Semiconductor domain",
+      "experience": "2 - 10 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": false,
+    },
+    {
+      "position": "Software Program Lead",
+      "position2": "- Semiconductor domain",
+      "experience": "2 - 10 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": true,
+    },
+    {
+      "position": "Software Program Lead",
+      "position2": "- Semiconductor domain",
+      "experience": "2 - 10 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": true,
+    },
+    {
+      "position": "Software Program Lead",
+      "position2": "- Semiconductor domain",
+      "experience": "2 - 10 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": false,
+    },
+    {
+      "position": "Software Program Lead",
+      "position2": "- Semiconductor domain",
+      "experience": "2 - 10 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": true,
+    },
+    {
+      "position": "Software Program Lead",
+      "position2": "- Semiconductor domain",
+      "experience": "2 - 10 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": true,
+    },
+    {
+      "position": "Software Program Lead",
+      "position2": "- Semiconductor domain",
+      "experience": "2 - 10 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": true,
+    },
+  ];
+  static const List<Map<String, dynamic>> Courses = [
     {
       "ProfilePic":
           "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
-      "CompanyName": "",
-      "Locations": "",
-      "description": "",
-      "perks": "",
+      "CourseName":
+          "XLRI JAMSHEDPUR | EXECUTIVE DEVELOPMENT PROGRAMME IN DRIVING GROWTH - THE CXO PROGRAMMME(BATCH 3)",
+      "platform": "ONLINE",
+      "duration": "11 MONTHS",
+      "experience": "15 - 30 YEARS OF EXPERIENCE",
     },
     {
       "ProfilePic":
           "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
-      "CompanyName": "",
-      "Locations": "",
-      "description": "",
-      "perks": "",
+      "CourseName":
+          "XLRI JAMSHEDPUR | EXECUTIVE DEVELOPMENT PROGRAMME IN DRIVING GROWTH - THE CXO PROGRAMMME(BATCH 3)",
+      "platform": "ONLINE",
+      "duration": "11 MONTHS",
+      "experience": "15 - 30 YEARS OF EXPERIENCE",
     },
     {
       "ProfilePic":
           "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
-      "CompanyName": "",
-      "Locations": "",
-      "description": "",
-      "perks": "",
+      "CourseName":
+          "XLRI JAMSHEDPUR | EXECUTIVE DEVELOPMENT PROGRAMME IN DRIVING GROWTH - THE CXO PROGRAMMME(BATCH 3)",
+      "platform": "ONLINE",
+      "duration": "11 MONTHS",
+      "experience": "15 - 30 YEARS OF EXPERIENCE",
+    },
+    {
+      "ProfilePic":
+          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
+      "CourseName":
+          "XLRI JAMSHEDPUR | EXECUTIVE DEVELOPMENT PROGRAMME IN DRIVING GROWTH - THE CXO PROGRAMMME(BATCH 3)",
+      "platform": "ONLINE",
+      "duration": "11 MONTHS",
+      "experience": "15 - 30 YEARS OF EXPERIENCE",
+    },
+    {
+      "ProfilePic": "",
+      "CourseName":
+          "XLRI JAMSHEDPUR | EXECUTIVE DEVELOPMENT PROGRAMME IN DRIVING GROWTH - THE CXO PROGRAMMME(BATCH 3)",
+      "platform": "ONLINE",
+      "duration": "11 MONTHS",
+      "experience": "15 - 30 YEARS OF EXPERIENCE",
     },
   ];
 }

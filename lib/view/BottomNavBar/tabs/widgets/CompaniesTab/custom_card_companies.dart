@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/custm_card_companies_data.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/CompaniesTab/custm_card_companies_data.dart';
 
 class CustomCardBuilderWithTile extends StatelessWidget {
   const CustomCardBuilderWithTile({super.key, required this.itemCount});

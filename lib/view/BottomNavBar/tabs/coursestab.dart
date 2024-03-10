@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hirist_tech/hirist_db.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/coursetabcard.dart';
 
 class CoursesTab extends StatelessWidget {
   const CoursesTab({super.key});
@@ -18,53 +20,24 @@ class CoursesTab extends StatelessWidget {
               child: Text("Courses")),
           Column(
             children: [
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 150,
-                width: 400,
-                color: Colors.blue,
-              ),
-              SizedBox(
-                height: 20,
+              SingleChildScrollView(
+                // scrollDirection: Axis.horizontal,
+                child: Column(
+                  children: List.generate(
+                    Hirist_db.Courses.length,
+                    (index) => CourseTabCard(
+                      ProfilePic: Hirist_db.Courses[index]["ProfilePic"],
+                      CourseName: Hirist_db.Courses[index]["CourseName"],
+                      Experience: Hirist_db.Courses[index]["experience"],
+                      Platform: Hirist_db.Courses[index]["platform"],
+                      Duration: Hirist_db.Courses[index]["duration"],
+
+                      // perks: Hirist_db.CompaniesTab[index]["perks"],
+                    ),
+                  ),
+                ),
               ),
             ],
-            // children: List.generate(
-            //   10,
-            //   (index) => CustomCardBuilderWithTile(
-            //     itemCount: index + 1,
-            //   ),
-            // ),
           )
         ],
       ),

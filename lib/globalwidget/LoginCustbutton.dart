@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 // import 'package:instclone/core/constants/colorconst.dart';
 
-class RegisterCustomButton extends StatelessWidget {
-  const RegisterCustomButton(
+class LoginCustomButton extends StatelessWidget {
+  const LoginCustomButton(
       {super.key,
       required this.text,
-      this.butcolor = const Color.fromARGB(255, 248, 94, 47),
+      this.butcolor = Colors.white,
       this.haveborder = false,
-      this.textColor = Colors.white,
+      this.textColor = const Color.fromARGB(255, 245, 88, 45),
       this.onTap,
       this.verticalPadding = 15});
   final String text;
@@ -27,7 +27,7 @@ class RegisterCustomButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: butcolor,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: Color.fromARGB(255, 248, 94, 47))),
+            border: Border.all(color: Color.fromARGB(255, 245, 88, 45))),
         child: Center(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,10 +41,6 @@ class RegisterCustomButton extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              // Icon(
-              //   Icons.arrow_forward,
-              //   color: Colors.white,
-              // ),
             ],
           ),
         ),

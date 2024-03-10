@@ -13,7 +13,7 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.all(8),
       child: Column(mainAxisSize: MainAxisSize.min, children: [
         Stack(
           alignment: AlignmentDirectional.center,

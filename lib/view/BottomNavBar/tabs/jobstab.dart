@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hirist_tech/hirist_db.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/jobstabcard.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/jobstabpremiumcard.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/CompaniesTab/CompaniesTabcard.dart';
 
 class JobsTab extends StatelessWidget {
   const JobsTab({super.key});
@@ -26,43 +30,42 @@ class JobsTab extends StatelessWidget {
                   ),
                 ],
               )),
-          Container(
-            height: 150,
-            width: 400,
-            color: Colors.blue,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: List.generate(
+                Hirist_db.MoreJobs.length,
+                (index) => JobsTabPremiumCard(
+                  Position: Hirist_db.MoreJobs[index]["position"],
+                  Position2: Hirist_db.MoreJobs[index]["position2"],
+                  Experience: Hirist_db.MoreJobs[index]["experience"],
+                  Locations: Hirist_db.MoreJobs[index]["location"],
+                  Date: Hirist_db.MoreJobs[index]["date"],
+
+                  // perks: Hirist_db.CompaniesTab[index]["perks"],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 30,
           ),
           Text("More Jobs for you"),
-          Container(
-            height: 150,
-            width: 400,
-            color: Colors.blue,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 150,
-            width: 400,
-            color: Colors.blue,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 150,
-            width: 400,
-            color: Colors.blue,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 150,
-            width: 400,
-            color: Colors.blue,
-          ),
-          SizedBox(
-            height: 20,
+          SingleChildScrollView(
+            child: Column(
+              children: List.generate(
+                Hirist_db.MoreJobs.length,
+                (index) => JobsTabCard(
+                  Position: Hirist_db.MoreJobs[index]["position"],
+                  Position2: Hirist_db.MoreJobs[index]["position2"],
+                  Experience: Hirist_db.MoreJobs[index]["experience"],
+                  Locations: Hirist_db.MoreJobs[index]["location"],
+                  Date: Hirist_db.MoreJobs[index]["date"],
+
+                  // perks: Hirist_db.CompaniesTab[index]["perks"],
+                ),
+              ),
+            ),
           ),
           // Column(
           //   children: List.generate(

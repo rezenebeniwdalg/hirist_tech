@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:instclone/core/constants/colorconst.dart';
 
-class RegisterCustomButton extends StatelessWidget {
-  const RegisterCustomButton(
+class CustomButton extends StatelessWidget {
+  const CustomButton(
       {super.key,
       required this.text,
       this.butcolor = const Color.fromARGB(255, 248, 94, 47),
@@ -22,12 +22,13 @@ class RegisterCustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: 170,
         padding: EdgeInsets.symmetric(vertical: 15),
         decoration: BoxDecoration(
             color: butcolor,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: Color.fromARGB(255, 248, 94, 47))),
+            border: Border.all(
+              color: Color.fromARGB(255, 248, 94, 47),
+            )),
         child: Center(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,10 +42,10 @@ class RegisterCustomButton extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              // Icon(
-              //   Icons.arrow_forward,
-              //   color: Colors.white,
-              // ),
+              Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+              ),
             ],
           ),
         ),

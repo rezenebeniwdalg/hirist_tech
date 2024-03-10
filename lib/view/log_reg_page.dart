@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hirist_tech/globalwidget/LoginCustbutton.dart';
 import 'package:hirist_tech/globalwidget/custbutton.dart';
 import 'package:hirist_tech/view/LoginScreen.dart';
 
@@ -20,7 +21,7 @@ class LoginRegister extends StatelessWidget {
               onPressed: () {},
               icon: Text(
                 "browse jobs",
-                style: TextStyle(color: Colors.orange),
+                style: TextStyle(color: Color.fromARGB(255, 245, 88, 45)),
               ))
         ],
       ),
@@ -71,18 +72,22 @@ class LoginRegister extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      child: Text(
-                        " Find your dream job in tech. Get started!  ",
-                        style: TextStyle(
-                          fontSize: 20,
+                      width: 400,
+                      child: Center(
+                        child: Text(
+                          " Find your dream job in tech. Get started!  ",
+                          style: TextStyle(fontSize: 18, color: Colors.black54),
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: 30,
                     ),
                     Row(
                       children: [
                         Container(
-                          child: CustomButton(
-                            text: "Log in",
+                          child: LoginCustomButton(
+                            text: "Login",
                             onTap: () {
                               Navigator.pushAndRemoveUntil(
                                   context,
@@ -96,7 +101,7 @@ class LoginRegister extends StatelessWidget {
                           width: 20,
                         ),
                         Container(
-                          child: CustomButton(
+                          child: RegisterCustomButton(
                             text: "Register",
                             onTap: () {
                               Navigator.pushAndRemoveUntil(
