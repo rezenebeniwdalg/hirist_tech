@@ -24,6 +24,7 @@ class JobsTabCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               height: 40,
@@ -33,6 +34,7 @@ class JobsTabCard extends StatelessWidget {
             ),
             SizedBox(width: 15),
             Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(Position),
                 Text(Position2),

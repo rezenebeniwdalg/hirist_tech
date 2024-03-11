@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hirist_tech/view/BottomNavBar/HomeScreen.dart';
 import 'package:hirist_tech/view/BottomNavBar/Notifications.dart';
+import 'package:hirist_tech/view/BottomNavBar/Profile.dart';
 import 'package:hirist_tech/view/BottomNavBar/explore.dart';
 
 // import 'package:instagram_clone_application/view/select_account_screen/select_account_screen.dart';
@@ -17,9 +18,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     HomeScreen(),
     Explore(),
     Notifications(),
-    Container(
-      color: Colors.pink,
-    )
+    ProfileScreen(),
   ];
 
   int selectedIndex = 0;

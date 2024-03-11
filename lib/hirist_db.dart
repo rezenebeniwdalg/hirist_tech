@@ -97,17 +97,17 @@ class Hirist_db {
     },
     {
       "ProfilePic":
-          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
-      "CompanyName": "",
+          "https://asset.brandfetch.io/idOKP392Gl/idnXtRQHzT.jpeg?updated=1708840376460",
+      "CompanyName": "YULU",
       "Locations": "multiple Locations",
       "description": "",
       "perks": "",
     },
     {
       "ProfilePic":
-          "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
-      "CompanyName": "",
-      "Locations": "",
+          "https://asset.brandfetch.io/search/icon/idsi-EXEyF/idtNazbGjs/1708150227578",
+      "CompanyName": "DO SELECT",
+      "Locations": "bangalore",
       "description": "",
       "perks": "",
     },
@@ -115,7 +115,7 @@ class Hirist_db {
       "ProfilePic":
           "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
       "CompanyName": "",
-      "Locations": "",
+      "Locations": "Hyderabad",
       "description": "",
       "perks": "",
     },
@@ -123,7 +123,7 @@ class Hirist_db {
       "ProfilePic":
           "https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-scroll.png",
       "CompanyName": "",
-      "Locations": "",
+      "Locations": "malappuram",
       "description": "",
       "perks": "",
     },
@@ -134,13 +134,21 @@ class Hirist_db {
       "position2": "- Semiconductor domain",
       "experience": "2 - 10 years",
       "location": "Bangalore",
-      "date": "09/03",
+      "date": "011/03",
       "ispremium": false,
     },
     {
-      "position": "Software Program Lead",
-      "position2": "- Semiconductor domain",
-      "experience": "2 - 10 years",
+      "position": "Software Developer",
+      "position2": "- .Net/Node,js",
+      "experience": "6 - 8 years",
+      "location": "Bangalore",
+      "date": "09/03",
+      "ispremium": true,
+    },
+    {
+      "position": "Product Analyst",
+      "position2": "- SQL/Python/R",
+      "experience": "4 - 7 years",
       "location": "Bangalore",
       "date": "09/03",
       "ispremium": true,
@@ -151,20 +159,12 @@ class Hirist_db {
       "experience": "2 - 10 years",
       "location": "Bangalore",
       "date": "09/03",
-      "ispremium": true,
-    },
-    {
-      "position": "Software Program Lead",
-      "position2": "- Semiconductor domain",
-      "experience": "2 - 10 years",
-      "location": "Bangalore",
-      "date": "09/03",
       "ispremium": false,
     },
     {
       "position": "Software Program Lead",
       "position2": "- Semiconductor domain",
-      "experience": "2 - 10 years",
+      "experience": "10 - 14 years",
       "location": "Bangalore",
       "date": "09/03",
       "ispremium": true,
@@ -231,5 +231,10 @@ class Hirist_db {
       "duration": "11 MONTHS",
       "experience": "15 - 30 YEARS OF EXPERIENCE",
     },
+  ];
+  static const List<Map<String, dynamic>> Notificationsdata = [
+    {
+      "": "",
+    }
   ];
 }

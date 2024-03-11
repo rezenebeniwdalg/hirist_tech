@@ -23,9 +23,12 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 242, 242, 252),
-          leading: Image.asset(
-            "assets/hirist-tech-logo.png",
-            fit: BoxFit.fitWidth,
+          leading: Transform.translate(
+            offset: Offset(15, 0),
+            child: Image.asset(
+              "assets/hirist-tech-logo.png",
+              fit: BoxFit.fitWidth,
+            ),
           ),
           leadingWidth: 106,
           actions: [

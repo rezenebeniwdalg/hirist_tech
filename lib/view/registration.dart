@@ -5,15 +5,16 @@ import 'package:hirist_tech/globalwidget/LoginCustbutton.dart';
 import 'package:hirist_tech/globalwidget/custbutton.dart';
 import 'package:hirist_tech/view/BottomNavBar/BottomNavBar.dart';
 
-class LoginScr extends StatefulWidget {
-  const LoginScr({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
   @override
-  State<LoginScr> createState() => _LoginScrState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginScrState extends State<LoginScr> {
+class _RegisterState extends State<Register> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passController = TextEditingController();
+  TextEditingController confirmpassController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -57,7 +58,7 @@ class _LoginScrState extends State<LoginScr> {
                   Container(
                     width: 370,
                     child: Text(
-                      "Welcome back!",
+                      "Get Stared with hirist!",
                       style:
                           TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
@@ -70,14 +71,7 @@ class _LoginScrState extends State<LoginScr> {
                       Container(
                         width: 370,
                         child: Text(
-                          "Sign in to your account and continue your",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ),
-                      Container(
-                        width: 370,
-                        child: Text(
-                          "job search",
+                          "Choose a job you love, and you never have to work aday in your life",
                           style: TextStyle(fontSize: 15),
                         ),
                       ),
@@ -146,28 +140,50 @@ class _LoginScrState extends State<LoginScr> {
                     },
                   ),
                   SizedBox(height: 8),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        "Forgot password?",
-                        textAlign: TextAlign.right,
-                        style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.blue),
+                  TextFormField(
+                    controller: confirmpassController,
+                    onTapOutside: (event) {
+                      FocusScope.of(context).unfocus();
+                    },
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      suffixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.grey,
                       ),
-                    ],
+                      hintText: 'Confirm Password',
+                      hintStyle: TextStyle(
+                          fontWeight: FontWeight.w400, color: Colors.grey),
+                      fillColor: Colors.white,
+                      filled: true,
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(10),
+                              bottomRight: Radius.circular(10)),
+                          borderSide:
+                              BorderSide(color: Colors.black.withOpacity(.1))),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.black.withOpacity(.4)),
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(10),
+                              bottomRight: Radius.circular(10))),
+                    ),
+                    onChanged: (value) {
+                      print(value);
+                      setState(() {});
+                    },
                   ),
                   SizedBox(
                     height: 40,
                   ),
                   CustomButton(
                     butcolor: nameController.text.isNotEmpty &&
-                            passController.text.isNotEmpty
+                            passController.text.isNotEmpty &&
+                            confirmpassController.text.isNotEmpty
                         ? Color.fromARGB(255, 245, 88, 45)
                         : Color.fromARGB(255, 245, 88, 45).withOpacity(.4),
-                    text: "Log in ",
+                    text: "Continue ",
                     onTap: () {
                       Navigator.pushAndRemoveUntil(
                           context,
@@ -184,12 +200,12 @@ class _LoginScrState extends State<LoginScr> {
                     child: RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
-                        text: "dont have an acount?",
+                        text: "Existing User?",
                         style: TextStyle(
                             fontSize: 16, color: Colors.black.withOpacity(.6)),
                         children: [
                           TextSpan(
-                              text: "Sign Up",
+                              text: "Sign In",
                               style: TextStyle(
                                   color: Color.fromARGB(255, 245, 88, 45)))
                         ],

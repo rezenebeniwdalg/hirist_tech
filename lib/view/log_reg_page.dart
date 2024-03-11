@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hirist_tech/globalwidget/LoginCustbutton.dart';
 import 'package:hirist_tech/globalwidget/custbutton.dart';
 import 'package:hirist_tech/view/LoginScreen.dart';
+import 'package:hirist_tech/view/registration.dart';
 
 class LoginRegister extends StatelessWidget {
   const LoginRegister({super.key});
@@ -11,9 +12,12 @@ class LoginRegister extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 249, 250, 254),
-        leading: Image.asset(
-          "assets/hirist-tech-logo.png",
-          fit: BoxFit.fitWidth,
+        leading: Transform.translate(
+          offset: Offset(15, 0),
+          child: Image.asset(
+            "assets/hirist-tech-logo.png",
+            fit: BoxFit.fitWidth,
+          ),
         ),
         leadingWidth: 106,
         actions: [
@@ -107,7 +111,7 @@ class LoginRegister extends StatelessWidget {
                               Navigator.pushAndRemoveUntil(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LoginScr()),
+                                      builder: (context) => Register()),
                                   (route) => false);
                             },
                           ),
