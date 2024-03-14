@@ -29,7 +29,10 @@ class Notifications extends StatelessWidget {
                               color: Color.fromARGB(215, 107, 181, 241)),
                           height: 40,
                           width: 40,
-                          child: Icon(Icons.phone_android_outlined),
+                          child: Icon(
+                            Icons.phone_android_outlined,
+                            color: Colors.white,
+                          ),
                         ),
                         SizedBox(width: 15),
                         Column(
@@ -85,10 +88,13 @@ class Notifications extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: Color.fromARGB(215, 107, 181, 241)),
+                              color: Color.fromARGB(255, 213, 76, 76)),
                           height: 40,
                           width: 40,
-                          child: Icon(Icons.phone_android_outlined),
+                          child: Icon(
+                            Icons.drafts_outlined,
+                            color: Colors.white,
+                          ),
                         ),
                         SizedBox(width: 15),
                         Column(

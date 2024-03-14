@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hirist_tech/hirist_db.dart';
+import 'package:hirist_tech/view/BottomNavBar/featuredemployers.dart';
+import 'package:hirist_tech/view/BottomNavBar/topemployer.dart';
 
 class Explore extends StatefulWidget {
   const Explore({super.key});
@@ -76,6 +79,7 @@ class _ExploreState extends State<Explore> {
                       ),
                       Container(
                         height: 300,
+                        width: double.infinity,
                         child: Row(children: []),
                       )
                     ],
@@ -89,24 +93,73 @@ class _ExploreState extends State<Explore> {
                   //     border: Border(
                   //         bottom: BorderSide(color: Colors.black.withOpacity(.1)))),
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 13),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text("Featured Employers"),
+                      Container(
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: List.generate(
+                              Hirist_db.FeaturedEmployers.length,
+                              (index) => FeaturedEmployer(
+                                Logo: Hirist_db.FeaturedEmployers[index]
+                                    ["logo"],
+                                Photo: Hirist_db.FeaturedEmployers[index]
+                                    ["photo"],
+
+                                // perks: Hirist_db.CompaniesTab[index]["perks"],
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
                     ],
                   )),
               SizedBox(
                 height: 20,
               ),
               Container(
+                  color: Color.fromARGB(255, 242, 242, 252),
                   width: double.infinity,
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 13),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  padding: EdgeInsets.symmetric(vertical: 13),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Text("Top Employers"),
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        child: Text(
+                          "Top Employers",
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: List.generate(
+                                        Hirist_db.TopEmployers.length,
+                                        (index) => TopEmployer(
+                                              Profile:
+                                                  Hirist_db.TopEmployers[index]
+                                                      ["profile"],
+                                            )),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
                     ],
                   )),
               SizedBox(

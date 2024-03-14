@@ -45,14 +45,16 @@ class CompaniesTabCard extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     )),
 
-                Text(Locations),
-                Text(Description),
-
-                // Divider(
-                //   indent: 100,
-                //   color: Colors.red,
-                // ),
-                Text("Perks & Benefits"),
+                Container(child: Text(Locations)),
+                Container(
+                  child: Text(Description),
+                ),
+                Divider(
+                  color: Colors.red,
+                  thickness: 1,
+                  height: 10,
+                ),
+                Container(child: Text("Perks & Benefits")),
                 Row(
                   children: [
                     CircleAvatar(

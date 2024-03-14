@@ -7,7 +7,10 @@ class StoryNotify extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+        // borderRadius: BorderRadius.only(topLeft: Radius.circular(10)),
+        color: Colors.white,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -27,7 +30,12 @@ class StoryNotify extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          CustomButton(text: "Got it"),
+          InkWell(
+            onTap: () {},
+            child: Container(
+                padding: EdgeInsets.all(12),
+                child: CustomButton(text: "Got it")),
+          ),
         ],
       ),
     );

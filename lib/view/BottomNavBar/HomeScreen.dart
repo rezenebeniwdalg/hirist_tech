@@ -7,6 +7,7 @@ import 'package:hirist_tech/view/BottomNavBar/filter.dart';
 import 'package:hirist_tech/view/BottomNavBar/tabs/coursestab.dart';
 import 'package:hirist_tech/view/BottomNavBar/tabs/jobstab.dart';
 import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/CompaniesTab/companiestab.dart';
+import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/mychat.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -33,9 +34,18 @@ class _HomeScreenState extends State<HomeScreen> {
           leadingWidth: 106,
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Container(
+                          width: double.infinity,
+                          child: MyChat(),
+                        ),
+                      ));
+                },
                 icon: Icon(
-                  Icons.chat_outlined,
+                  Icons.forum_outlined,
                   color: Color.fromARGB(255, 245, 88, 45),
                 ))
           ],
