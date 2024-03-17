@@ -1,30 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:hirist_tech/feedback.dart';
-import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/settings/settingswidget/coursesettings.dart';
-import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/settings/settingswidget/notification_setting.dart';
-import 'package:hirist_tech/view/BottomNavBar/tabs/widgets/settings/settingswidget/privacysettings.dart';
 
-class Settings extends StatelessWidget {
-  const Settings({super.key});
+class SettingsNotification extends StatelessWidget {
+  const SettingsNotification({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("SETTINGS"),
+        title: Text("NOTIFICATION SETTINGS"),
       ),
       body: Container(
         padding: EdgeInsets.all(10),
         width: double.infinity,
         child: Column(children: [
           InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => SettingsNotification()));
-            },
+            onTap: () {},
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               child: Row(
@@ -32,46 +23,13 @@ class Settings extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.notifications_none_outlined),
+                      Icon(Icons.rss_feed),
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Notifications")),
+                          child: Text("Daily New Jobs")),
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
-                ],
-              ),
-            ),
-          ),
-          Divider(
-            color: Color.fromARGB(255, 225, 225, 225),
-            thickness: 1,
-            height: 10,
-            indent: 55,
-            endIndent: 2,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SettingsPrivacy()));
-            },
-            child: Container(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.vpn_key_rounded),
-                      Container(
-                          padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Privacy Settings")),
-                    ],
-                  ),
-                  Icon(Icons.arrow_forward_ios)
+                  Icon(Icons.check_box)
                 ],
               ),
             ),
@@ -95,13 +53,13 @@ class Settings extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.manage_accounts),
+                      Icon(Icons.check_box_outlined),
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Account Settings")),
+                          child: Text("Applied Jobs")),
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
+                  Icon(Icons.check_box)
                 ],
               ),
             ),
@@ -117,10 +75,37 @@ class Settings extends StatelessWidget {
             height: 10,
           ),
           InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Settingscourse()));
-            },
+            onTap: () {},
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.lightbulb_outline_rounded),
+                      Container(
+                          padding: EdgeInsets.symmetric(horizontal: 22),
+                          child: Text("Recruiter Actions")),
+                    ],
+                  ),
+                  Icon(Icons.check_box)
+                ],
+              ),
+            ),
+          ),
+          Divider(
+            color: Color.fromARGB(255, 225, 225, 225),
+            thickness: 1,
+            height: 10,
+            indent: 55,
+            endIndent: 2,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            onTap: () {},
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               child: Row(
@@ -131,10 +116,10 @@ class Settings extends StatelessWidget {
                       Icon(Icons.import_contacts_rounded),
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Course Settings")),
+                          child: Text("Educational-Learn Grow")),
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
+                  Icon(Icons.check_box)
                 ],
               ),
             ),
@@ -158,13 +143,13 @@ class Settings extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.panorama_outlined),
+                      Icon(Icons.volume_up),
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Block Stories")),
+                          child: Text("Promotional")),
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
+                  Icon(Icons.check_box)
                 ],
               ),
             ),
@@ -188,46 +173,13 @@ class Settings extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.queue_play_next_outlined),
+                      Icon(Icons.thumb_up),
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Personalize Jobfeed")),
+                          child: Text("Follow up")),
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
-                ],
-              ),
-            ),
-          ),
-          Divider(
-            color: Color.fromARGB(255, 225, 225, 225),
-            thickness: 1,
-            height: 10,
-            indent: 55,
-            endIndent: 2,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => FeedbackSend()));
-            },
-            child: Container(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.sms_failed_sharp),
-                      Container(
-                          padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Feedback")),
-                    ],
-                  ),
-                  Icon(Icons.arrow_forward_ios)
+                  Icon(Icons.check_box)
                 ],
               ),
             ),
@@ -251,13 +203,43 @@ class Settings extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.power_settings_new_outlined),
+                      Icon(Icons.speaker_notes),
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 22),
-                          child: Text("Logout")),
+                          child: Text("Chat Notifications")),
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
+                  Icon(Icons.check_box)
+                ],
+              ),
+            ),
+          ),
+          Divider(
+            color: Color.fromARGB(255, 225, 225, 225),
+            thickness: 1,
+            height: 10,
+            indent: 55,
+            endIndent: 2,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            onTap: () {},
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.recent_actors_outlined),
+                      Container(
+                          padding: EdgeInsets.symmetric(horizontal: 22),
+                          child: Text("Attach CoverLetter")),
+                    ],
+                  ),
+                  Icon(Icons.check_box)
                 ],
               ),
             ),

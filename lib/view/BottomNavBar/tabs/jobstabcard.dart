@@ -34,6 +34,7 @@ class JobsTabCard extends StatelessWidget {
             ),
             SizedBox(width: 15),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(Position),

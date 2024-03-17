@@ -134,7 +134,7 @@ class Hirist_db {
       "position2": "- Semiconductor domain",
       "experience": "2 - 10 years",
       "location": "Bangalore",
-      "date": "011/03",
+      "date": "11/03",
       "ispremium": false,
     },
     {
@@ -353,6 +353,33 @@ class Hirist_db {
           "https://images.pexels.com/photos/18252623/pexels-photo-18252623/free-photo-of-shrubs-and-flower-by-wooden-rural-cottage.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
       "photo":
           "https://images.pexels.com/photos/18252623/pexels-photo-18252623/free-photo-of-shrubs-and-flower-by-wooden-rural-cottage.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+    },
+  ];
+
+  static const List<Map<String, dynamic>> TrendingCourses = [
+    {
+      "profile":
+          "https://images.pexels.com/photos/18252623/pexels-photo-18252623/free-photo-of-shrubs-and-flower-by-wooden-rural-cottage.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "institute": "SPJIMR",
+      "course name": "SPJIMR",
+    },
+    {
+      "profile":
+          "https://images.pexels.com/photos/18252623/pexels-photo-18252623/free-photo-of-shrubs-and-flower-by-wooden-rural-cottage.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "institute": "SPJIMR",
+      "course name": "SPJIMR",
+    },
+    {
+      "profile":
+          "https://images.pexels.com/photos/18252623/pexels-photo-18252623/free-photo-of-shrubs-and-flower-by-wooden-rural-cottage.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "institute": "SPJIMR",
+      "course name": "SPJIMR",
+    },
+    {
+      "profile":
+          "https://images.pexels.com/photos/18252623/pexels-photo-18252623/free-photo-of-shrubs-and-flower-by-wooden-rural-cottage.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "institute": "SPJIMR",
+      "course name": "SPJIMR",
     },
   ];
 }
